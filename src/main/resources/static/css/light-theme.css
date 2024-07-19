@@ -1,0 +1,22 @@
+/* light-theme.css */
+body {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    background-color: white;
+    color: black;
+}
+
+.form-check-input {
+    background-color: white;
+    color: black;
+}
+
+/* Assicurati che tutti gli elementi abbiano stili corretti */
+a {
+    color: black;
+}
+
+/* Altri stili per il tema chiaro */

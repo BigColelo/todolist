@@ -1,0 +1,37 @@
+/* dark-theme.css */
+body {
+    background-color: #212529; /* Bootstrap dark background */
+    color: #f8f9fa; /* Bootstrap light text color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #212529; /* Same as body background to blend in */
+    padding: 15px; /* Add padding to make the content look nicer */
+    border: none; /* Remove any border */
+}
+
+/* Specific styles for other elements */
+.table {
+    background-color: #343a40; /* Dark table background */
+    color: #f8f9fa; /* Light text color */
+}
+
+.btn-info {
+    background-color: #117a8b; /* Darker info button color */
+    border-color: #117a8b;
+    color: #ffffff;
+}
+
+.btn-danger {
+    background-color: #bd2130; /* Darker danger button color */
+    border-color: #bd2130;
+    color: #ffffff;
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
+    color: #adb5bd; /* Lighter secondary button color */
+    border-color: #adb5bd;
+}

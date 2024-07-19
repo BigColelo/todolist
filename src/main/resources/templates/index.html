@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" />
+    <link th:rel="stylesheet" th:href="@{/css/light-theme.css}" th:if="${theme == 'light'}" />
+    <link th:rel="stylesheet" th:href="@{/css/dark-theme.css}" th:if="${theme == 'dark'}" />
+    <script src="changetheme.js" th:src="@{/js/changetheme.js}"></script>
     <title>To Do - Home</title>
 </head>
 <body>
+    <div class="form-check form-switch mx-4">
+        <input class="form-check-input p-2" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked onclick="myFunction()" />
+    </div>
     <div class="container">
         <h1>Spring Boot ToDo Application</h1>
         <hr/>
