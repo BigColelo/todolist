@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" />
+    <title>To Do - Home</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Spring Boot ToDo Application</h1>
+        <hr/>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>ID</th>
+                    <th>Description</th>
+                    <th>Is Complete</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item : ${items}">
+                    <td>
+                        <div class="btn btn-group-sm" role="group">
+                            <a class="btn btn-info" th:href="@{/api/v1/edit/{id}(id=${item.id})}"><i class="bi bi-pencil-fill"></i>Edit</a>
+                            <a class="btn btn-danger" th:href="@{/api/v1/delete/{id}(id=${item.id})}"><i class="bi bi-trash-fill"></i>Delete</a>
+                        </div>
+                    </td>
+                    <td th:text="${item.id}"></td>
+                    <td th:text="${item.description}"></td>
+                    <td>
+                        <span th:if="${item.isCompleted} == true" th:text="Yes"></span>
+                        <span th:unless="${item.isCompleted} == true" th:text="No"></span>
+                    </td>
+                    <td th:text="${item.createdAt}"></td>
+                    <td th:text="${item.updatedAt}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><a class="btn btn-outline-success" href="/api/v1/create-todo"><i class=""bi bi-plus-square-fill></i>Create a to do</a></p>
+    </div>
+    <script th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.min.js}"></script>
+</body>
+</html>
